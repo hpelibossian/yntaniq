@@ -1,0 +1,7 @@
+CREATE TABLE `yntaniq2` (
+  `id` int(11) AUTO_INCREMENT PRIMARY KEY,
+  `anun` varchar(100) DEFAULT NULL,
+  `azganun` varchar(100) DEFAULT NULL,
+  `tsnund` date DEFAULT NULL,
+  `ser` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
