@@ -54,12 +54,12 @@ public class YntaniqService {
     }
 
     public Page<Yntaniq> getAllYntaniqPages(Integer page, Integer size) {
-        Page pageOfHotels = yntaniqRepository.findAll(new PageRequest(page, size));
+        Page pageOf = yntaniqRepository.findAll(new PageRequest(page, size));
         // example of adding to the /metrics
         if (size > 50) {
             counterService.increment("YntaniqService.getAll.largePayload");
         }
-        return pageOfHotels;
+        return pageOf;
     }
 
 }
