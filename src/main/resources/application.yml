@@ -42,6 +42,14 @@ info:
 
 yntaniq.service:
   name: 'default profile:'
+
+spring.mail.properties.mail.smtp.starttls.enable: true
+spring.mail.host: smtp.gmail.com
+spring.mail.username: pelibossian.test@gmail.com
+spring.mail.password: ports1966
+spring.mail.port: 587
+spring.mail.smtp.auth: true
+
 ---
 spring:
   profiles: test
@@ -51,3 +59,4 @@ spring.jpa:
 
 hotel.service:
   name: 'test profile:'
+
