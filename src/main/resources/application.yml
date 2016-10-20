@@ -48,6 +48,11 @@ spring.data.mongodb.uri: mongodb://192.168.0.47:27017
 
 #spring.data.elasticsearch.cluster-nodes: localhost:9300
 #spring.data.elasticsearch.properties.path.home: /Users/pelibossian/dev/elasticsearch-2.4.1
+spring:
+    data:
+        elasticsearch:
+            cluster-name: hratchia-application
+            cluster-nodes: localhost:9300
 
 spring.mail.properties.mail.smtp.starttls.enable: true
 spring.mail.host: smtp.gmail.com
