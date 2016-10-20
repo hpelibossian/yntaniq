@@ -1,4 +1,4 @@
-package com.yntaniq.service;
+package com.yntaniq.mail.service;
 
 import com.yntaniq.mail.EmailHtmlSender;
 import com.yntaniq.mail.EmailSender;

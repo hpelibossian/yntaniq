@@ -1,6 +1,6 @@
-package com.yntaniq.dao.jpa;
+package com.yntaniq.mysql.repository;
 
-import com.yntaniq.domain.Harazatner;
+import com.yntaniq.mysql.domain.Harazatner;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 import java.util.Collection;

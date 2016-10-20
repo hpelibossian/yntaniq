@@ -18,7 +18,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 //@EnableTransactionManagement // Elide requires transaction support, which we enable here
 @EnableAutoConfiguration  // Sprint Boot Auto Configuration
 @ComponentScan(basePackages = "com.yntaniq")
-@EnableJpaRepositories("com.yntaniq.dao.jpa") // To segregate MongoDB and JPA repositories. Otherwise not needed.
+@EnableJpaRepositories("com.yntaniq.mysql.repository") // To segregate MongoDB and JPA repositories. Otherwise not needed.
 public class YntaniqApplication extends SpringBootServletInitializer {
 	private static final Class<YntaniqApplication> applicationClass = YntaniqApplication.class;
 	private static final Logger log = LoggerFactory.getLogger(applicationClass);

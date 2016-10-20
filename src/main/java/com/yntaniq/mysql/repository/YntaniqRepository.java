@@ -1,13 +1,9 @@
-package com.yntaniq.dao.jpa;
+package com.yntaniq.mysql.repository;
 
-import com.yntaniq.domain.Yntaniq;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.yntaniq.mysql.domain.Yntaniq;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-import javax.transaction.Transactional;
 import java.util.Collection;
-import java.util.List;
 
 
 //@Transactional

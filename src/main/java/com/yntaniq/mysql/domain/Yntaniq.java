@@ -1,12 +1,12 @@
-package com.yntaniq.domain;
+package com.yntaniq.mysql.domain;
 
 import javax.persistence.*;
 import java.util.Date;
 
 
 @Entity
-@Table(name = "harazatner")
-public class Harazatner {
+@Table(name = "yntaniq")
+public class Yntaniq {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,17 +24,17 @@ public class Harazatner {
     @Column()
     private String ser;
 
-    public Harazatner(){
+    public Yntaniq(){
     }
 
-    public Harazatner(String anun, String azganun, Date tsnund, String ser) {
+    public Yntaniq(String anun, String azganun, Date tsnund, String ser) {
         this.anun = anun;
         this.azganun = azganun;
         this.tsnund = tsnund;
         this.ser = ser;
     }
 
-    public void mofify(Harazatner yntaniq){
+    public void mofify(Yntaniq yntaniq){
         this.anun = yntaniq.anun;
         this.azganun = yntaniq.azganun;
         this.tsnund = yntaniq.tsnund;

@@ -1,7 +1,7 @@
-package com.yntaniq.api.rest;
+package com.yntaniq.mysql.apirest;
 
-import com.yntaniq.domain.Harazatner;
-import com.yntaniq.service.HarazatnerService;
+import com.yntaniq.mysql.domain.Harazatner;
+import com.yntaniq.mysql.service.HarazatnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/das/v1/harazatner")
+@RequestMapping("/das/v1/mysql/harazatner")
 public class HarazatnerController {
 
     @Autowired

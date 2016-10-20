@@ -1,7 +1,7 @@
-package com.yntaniq.api.rest;
+package com.yntaniq.mysql.apirest;
 
-import com.yntaniq.domain.Ynkerner;
-import com.yntaniq.service.YnkernerService;
+import com.yntaniq.mysql.domain.Ynkerner;
+import com.yntaniq.mysql.service.YnkernerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("/das/v1/ynkerner")
+@RequestMapping("/das/v1/mysql/ynkerner")
 public class YnkernerController {
 
     @Autowired

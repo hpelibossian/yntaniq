@@ -1,51 +1,48 @@
-package com.yntaniq.domain;
+package com.yntaniq.elasticsearch.domain;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document ;
+
 import java.util.Date;
 
+@Document(indexName = "das", type = "yntaniq")
 
-@Entity
-@Table(name = "ynkerner")
-public class Ynkerner {
+public class YntaniqElasticsearch {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
 
-    @Column()
     private String anun;
 
-    @Column()
     private String azganun;
 
-    @Column()
     private Date tsnund;
 
-    @Column()
     private String ser;
 
-    public Ynkerner(){
+    public YntaniqElasticsearch(){
     }
 
-    public Ynkerner(String anun, String azganun, Date tsnund, String ser) {
+    public YntaniqElasticsearch(Long id_mysql, String anun, String azganun, Date tsnund, String ser) {
         this.anun = anun;
         this.azganun = azganun;
         this.tsnund = tsnund;
         this.ser = ser;
     }
 
-    public void mofify(Ynkerner yntaniq){
-        this.anun = yntaniq.anun;
-        this.azganun = yntaniq.azganun;
-        this.tsnund = yntaniq.tsnund;
-        this.ser = yntaniq.ser;
+    public void mofify(YntaniqElasticsearch yntaniqElasticsearch){
+        this.anun = yntaniqElasticsearch.anun;
+        this.azganun = yntaniqElasticsearch.azganun;
+        this.tsnund = yntaniqElasticsearch.tsnund;
+        this.ser = yntaniqElasticsearch.ser;
     }
-    // for tests ONLY
-    public void setId(long id) {
+
+
+    public void setId(String id) {
         this.id = id;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
@@ -83,7 +80,7 @@ public class Ynkerner {
 
     @Override
     public String toString() {
-        return "Yntaniq {" +
+        return "YntaniqElasticsearch {" +
                 "id=" + id +
                 ", anun='" + anun + '\'' +
                 ", azganun='" + azganun + '\'' +

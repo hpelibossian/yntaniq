@@ -1,7 +1,7 @@
-package com.yntaniq.service;
+package com.yntaniq.mysql.service;
 
-import com.yntaniq.dao.jpa.HarazatnerRepository;
-import com.yntaniq.domain.Harazatner;
+import com.yntaniq.mysql.repository.HarazatnerRepository;
+import com.yntaniq.mysql.domain.Harazatner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +14,6 @@ import org.springframework.stereotype.Service;
 import java.util.Collection;
 
 
-/**
- * Created by pelibossian on 10/10/16.
- */
 @Service
 public class HarazatnerService {
     private static final Logger log = LoggerFactory.getLogger(HarazatnerService.class);

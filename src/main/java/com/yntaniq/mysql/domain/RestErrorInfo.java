@@ -1,4 +1,4 @@
-package com.yntaniq.domain;
+package com.yntaniq.mysql.domain;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

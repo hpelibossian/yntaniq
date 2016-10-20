@@ -1,51 +1,56 @@
-package com.yntaniq.domain;
+package com.yntaniq.mongodb.domain;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import java.util.Date;
 
-
-@Entity
-@Table(name = "yntaniq")
-public class Yntaniq {
+@Document(collection = "yntaniq")
+public class YntaniqMongo {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
 
-    @Column()
+    @Field
+    private long id_mysql;
+
+    @Field
     private String anun;
 
-    @Column()
+    @Field
     private String azganun;
 
-    @Column()
+    @Field
     private Date tsnund;
 
-    @Column()
+    @Field
     private String ser;
 
-    public Yntaniq(){
+    public YntaniqMongo(){
     }
 
-    public Yntaniq(String anun, String azganun, Date tsnund, String ser) {
+    public YntaniqMongo(Long id_mysql, String anun, String azganun, Date tsnund, String ser) {
+        this.id_mysql = id_mysql;
         this.anun = anun;
         this.azganun = azganun;
         this.tsnund = tsnund;
         this.ser = ser;
     }
 
-    public void mofify(Yntaniq yntaniq){
-        this.anun = yntaniq.anun;
-        this.azganun = yntaniq.azganun;
-        this.tsnund = yntaniq.tsnund;
-        this.ser = yntaniq.ser;
+    public void mofify(YntaniqMongo yntaniqMongo){
+        this.anun = yntaniqMongo.anun;
+        this.azganun = yntaniqMongo.azganun;
+        this.tsnund = yntaniqMongo.tsnund;
+        this.ser = yntaniqMongo.ser;
     }
-    // for tests ONLY
-    public void setId(long id) {
+
+
+    public void setId(String id) {
         this.id = id;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
@@ -81,9 +86,17 @@ public class Yntaniq {
         this.ser = ser;
     }
 
+    public long getId_mysql() {
+        return id_mysql;
+    }
+
+    public void setId_mysql(long id_mysql) {
+        this.id_mysql = id_mysql;
+    }
+
     @Override
     public String toString() {
-        return "Yntaniq {" +
+        return "YntaniqMongo {" +
                 "id=" + id +
                 ", anun='" + anun + '\'' +
                 ", azganun='" + azganun + '\'' +

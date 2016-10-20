@@ -1,6 +1,6 @@
 package com.yntaniq.api.rest;
 
-import com.yntaniq.domain.RestErrorInfo;
+import com.yntaniq.mysql.domain.RestErrorInfo;
 import com.yntaniq.exception.DataFormatException;
 import com.yntaniq.exception.ResourceNotFoundException;
 import org.slf4j.Logger;

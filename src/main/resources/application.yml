@@ -43,10 +43,16 @@ info:
 yntaniq.service:
   name: 'default profile:'
 
+spring.data.mongodb.database: DAS
+spring.data.mongodb.uri: mongodb://192.168.0.47:27017
+
+#spring.data.elasticsearch.cluster-nodes: localhost:9300
+#spring.data.elasticsearch.properties.path.home: /Users/pelibossian/dev/elasticsearch-2.4.1
+
 spring.mail.properties.mail.smtp.starttls.enable: true
 spring.mail.host: smtp.gmail.com
 spring.mail.username: pelibossian.test@gmail.com
-spring.mail.password: ports1966
+spring.mail.password: norports1966
 spring.mail.port: 587
 spring.mail.smtp.auth: true
 
